@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Life SuperApp</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Animated Background -->
+    <div class="animated-background">
+        <div class="floating-shape shape-1"></div>
+        <div class="floating-shape shape-2"></div>
+        <div class="floating-shape shape-3"></div>
+        <div class="floating-shape shape-4"></div>
+        <div class="floating-shape shape-5"></div>
+    </div>
+
+    <!-- Glassmorphism Navigation Header -->
+    <header class="glass-header">
+        <div class="container">
+            <div class="nav-brand">
+                <div class="logo-icon">🎓</div>
+                <h1>Student Life SuperApp</h1>
+            </div>
+            <nav class="glass-nav">
+                <button class="glass-nav-item active" data-page="dashboard">
+                    <span class="nav-icon">🏠</span>
+                    <span class="nav-text">Dashboard</span>
+                </button>
+                <button class="glass-nav-item" data-page="lost-found">
+                    <span class="nav-icon">🎒</span>
+                    <span class="nav-text">Lost & Found</span>
+                </button>
+                <button class="glass-nav-item" data-page="skill-swap">
+                    <span class="nav-icon">🔄</span>
+                    <span class="nav-text">Skill Swap</span>
+                </button>
+                <button class="glass-nav-item" data-page="events">
+                    <span class="nav-icon">🎤</span>
+                    <span class="nav-text">Events</span>
+                </button>
+                <button class="glass-nav-item" data-page="time-capsule">
+                    <span class="nav-icon">⏳</span>
+                    <span class="nav-text">Time Capsule</span>
+                </button>
+                <button class="glass-nav-item" data-page="book-exchange">
+                    <span class="nav-icon">📚</span>
+                    <span class="nav-text">Books</span>
+                </button>
+                <button class="glass-nav-item" data-page="ai-study">
+                    <span class="nav-icon">🤖</span>
+                    <span class="nav-text">AI Study</span>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Dashboard Page -->
+        <div id="dashboard" class="page active">
+            <div class="container">
+                <!-- Hero Section with Gradient -->
+                <div class="hero-section">
+                    <div class="hero-content">
+                        <h2 class="hero-title">Welcome to Your Future 🚀</h2>
+                        <p class="hero-subtitle">Your all-in-one student life companion with cutting-edge design and powerful features</p>
+                        <div class="hero-stats">
+                            <div class="stat-bubble">
+                                <div class="stat-number" id="total-items">0</div>
+                                <div class="stat-label">Active Items</div>
+                            </div>
+                            <div class="stat-bubble">
+                                <div class="stat-number" id="total-connections">0</div>
+                                <div class="stat-label">Connections</div>
+                            </div>
+                            <div class="stat-bubble">
+                                <div class="stat-number" id="total-events">0</div>
+                                <div class="stat-label">Events</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Beautiful Module Grid -->
+                <div class="module-grid">
+                    <div class="gradient-module-card purple-pink" data-page="lost-found">
+                        <div class="card-glow"></div>
+                        <div class="module-icon">🎒</div>
+                        <h3>Lost & Found</h3>
+                        <p>Find your lost treasures with AI-powered matching</p>
+                        <div class="module-stats">
+                            <div class="stat-pill">
+                                <span class="stat-value" id="lost-items-count">0</span>
+                                <span class="stat-text">items found</span>
+                            </div>
+                        </div>
+                        <div class="card-shine"></div>
+                    </div>
+                    
+                    <div class="gradient-module-card blue-cyan" data-page="skill-swap">
+                        <div class="card-glow"></div>
+                        <div class="module-icon">🔄</div>
+                        <h3>Skill Swap Hub</h3>
+                        <p>Exchange knowledge and grow together</p>
+                        <div class="module-stats">
+                            <div class="stat-pill">
+                                <span class="stat-value" id="skill-swaps-count">0</span>
+                                <span class="stat-text">active swaps</span>
+                            </div>
+                        </div>
+                        <div class="card-shine"></div>
+                    </div>
+                    
+                    <div class="gradient-module-card orange-red" data-page="events">
+                        <div class="card-glow"></div>
+                        <div class="module-icon">🎤</div>
+                        <h3>Event Collaboration</h3>
+                        <p>Create unforgettable experiences together</p>
+                        <div class="module-stats">
+                            <div class="stat-pill">
+                                <span class="stat-value" id="events-count">0</span>
+                                <span class="stat-text">upcoming events</span>
+                            </div>
+                        </div>
+                        <div class="card-shine"></div>
+                    </div>
+                    
+                    <div class="gradient-module-card green-blue" data-page="time-capsule">
+                        <div class="card-glow"></div>
+                        <div class="module-icon">⏳</div>
+                        <h3>Time Capsule</h3>
+                        <p>Capture moments for your future self</p>
+                        <div class="module-stats">
+                            <div class="stat-pill">
+                                <span class="stat-value" id="capsules-count">0</span>
+                                <span class="stat-text">memories saved</span>
+                            </div>
+                        </div>
+                        <div class="card-shine"></div>
+                    </div>
+                    
+                    <div class="gradient-module-card pink-orange" data-page="book-exchange">
+                        <div class="card-glow"></div>
+                        <div class="module-icon">📚</div>
+                        <h3>Book Exchange</h3>
+                        <p>Smart textbook trading marketplace</p>
+                        <div class="module-stats">
+                            <div class="stat-pill">
+                                <span class="stat-value" id="books-count">0</span>
+                                <span class="stat-text">books available</span>
+                            </div>
+                        </div>
+                        <div class="card-shine"></div>
+                    </div>
+                    
+                    <div class="gradient-module-card purple-blue" data-page="ai-study">
+                        <div class="card-glow"></div>
+                        <div class="module-icon">🤖</div>
+                        <h3>AI Study Buddy</h3>
+                        <p>Personalized learning with AI assistance</p>
+                        <div class="module-stats">
+                            <div class="stat-pill">
+                                <span class="stat-value" id="quizzes-count">0</span>
+                                <span class="stat-text">quizzes ready</span>
+                            </div>
+                        </div>
+                        <div class="card-shine"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Lost & Found Page -->
+        <div id="lost-found" class="page">
+            <div class="container">
+                <div class="page-header">
+                    <div class="header-content">
+                        <h2>🎒 Lost & Found</h2>
+                        <p>Reunite with your belongings using our smart matching system</p>
+                    </div>
+                    <button class="glass-btn primary" id="post-lost-item-btn">
+                        <span class="btn-icon">➕</span>
+                        Post Lost Item
+                    </button>
+                </div>
+                
+                <div class="glass-filters">
+                    <select id="category-filter" class="glass-select">
+                        <option value="">All Categories</option>
+                        <option value="Electronics">Electronics</option>
+                        <option value="Books">Books</option>
+                        <option value="Clothing">Clothing</option>
+                        <option value="Keys">Keys</option>
+                        <option value="ID Cards">ID Cards</option>
+                        <option value="Other">Other</option>
+                    </select>
+                    <select id="location-filter" class="glass-select">
+                        <option value="">All Locations</option>
+                        <option value="Library">Library</option>
+                        <option value="Math Building">Math Building</option>
+                        <option value="Gym">Gym</option>
+                        <option value="Parking Lot B">Parking Lot B</option>
+                        <option value="Cafeteria">Cafeteria</option>
+                    </select>
+                </div>
+                
+                <div id="lost-items-grid" class="beautiful-grid"></div>
+            </div>
+        </div>
+
+        <!-- Skill Swap Page -->
+        <div id="skill-swap" class="page">
+            <div class="container">
+                <div class="page-header">
+                    <div class="header-content">
+                        <h2>🔄 Skill Swap Hub</h2>
+                        <p>Connect, learn, and grow with your peers</p>
+                    </div>
+                    <div class="header-actions">
+                        <button class="glass-btn primary" id="offer-skill-btn">
+                            <span class="btn-icon">🎯</span>
+                            Offer Skill
+                        </button>
+                        <button class="glass-btn secondary" id="request-skill-btn">
+                            <span class="btn-icon">🙋‍♂️</span>
+                            Request Skill
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="glass-tabs">
+                    <button class="glass-tab active" data-tab="offers">
+                        <span class="tab-icon">🎁</span>
+                        Skill Offers
+                    </button>
+                    <button class="glass-tab" data-tab="requests">
+                        <span class="tab-icon">🔍</span>
+                        Skill Requests
+                    </button>
+                </div>
+                
+                <div id="skill-swaps-grid" class="beautiful-grid"></div>
+            </div>
+        </div>
+
+        <!-- Events Page -->
+        <div id="events" class="page">
+            <div class="container">
+                <div class="page-header">
+                    <div class="header-content">
+                        <h2>🎤 Event Collaboration</h2>
+                        <p>Create amazing experiences together</p>
+                    </div>
+                    <button class="glass-btn primary" id="create-event-btn">
+                        <span class="btn-icon">✨</span>
+                        Create Event
+                    </button>
+                </div>
+                <div id="events-grid" class="beautiful-grid"></div>
+            </div>
+        </div>
+
+        <!-- Time Capsule Page -->
+        <div id="time-capsule" class="page">
+            <div class="container">
+                <div class="page-header">
+                    <div class="header-content">
+                        <h2>⏳ Time Capsule</h2>
+                        <p>Messages to your future self</p>
+                    </div>
+                    <button class="glass-btn primary" id="create-capsule-btn">
+                        <span class="btn-icon">💫</span>
+                        Create Capsule
+                    </button>
+                </div>
+                <div id="capsules-grid" class="beautiful-grid"></div>
+            </div>
+        </div>
+
+        <!-- Book Exchange Page -->
+        <div id="book-exchange" class="page">
+            <div class="container">
+                <div class="page-header">
+                    <div class="header-content">
+                        <h2>📚 Book Exchange</h2>
+                        <p>Smart textbook marketplace</p>
+                    </div>
+                    <button class="glass-btn primary" id="post-book-btn">
+                        <span class="btn-icon">📖</span>
+                        Post Book
+                    </button>
+                </div>
+                
+                <div class="glass-filters">
+                    <select id="subject-filter" class="glass-select">
+                        <option value="">All Subjects</option>
+                        <option value="Computer Science">Computer Science</option>
+                        <option value="Chemistry">Chemistry</option>
+                        <option value="Mathematics">Mathematics</option>
+                        <option value="Economics">Economics</option>
+                    </select>
+                    <select id="condition-filter" class="glass-select">
+                        <option value="">All Conditions</option>
+                        <option value="Like New">Like New</option>
+                        <option value="Good">Good</option>
+                        <option value="Fair">Fair</option>
+                    </select>
+                </div>
+                
+                <div id="books-grid" class="beautiful-grid"></div>
+            </div>
+        </div>
+
+        <!-- AI Study Buddy Page -->
+        <div id="ai-study" class="page">
+            <div class="container">
+                <div class="page-header">
+                    <div class="header-content">
+                        <h2>🤖 AI Study Buddy</h2>
+                        <p>Your personalized learning companion</p>
+                    </div>
+                    <button class="glass-btn primary" id="upload-notes-btn">
+                        <span class="btn-icon">📝</span>
+                        Upload Notes
+                    </button>
+                </div>
+                
+                <div class="study-dashboard">
+                    <div class="glass-stats-grid">
+                        <div class="glass-stat-card">
+                            <div class="stat-icon">📊</div>
+                            <h3>Quiz Progress</h3>
+                            <div class="animated-progress">
+                                <div class="progress-ring">
+                                    <svg viewBox="0 0 36 36">
+                                        <path class="progress-bg" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"></path>
+                                        <path class="progress-fill" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" stroke-dasharray="65, 100"></path>
+                                    </svg>
+                                    <div class="progress-text">65%</div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="glass-stat-card">
+                            <div class="stat-icon">🎯</div>
+                            <h3>Average Score</h3>
+                            <div class="big-score">85%</div>
+                            <div class="score-trend">📈 +12% this week</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div id="quizzes-grid" class="beautiful-grid"></div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Glassmorphism Modal -->
+    <div id="modal" class="glass-modal hidden">
+        <div class="modal-backdrop"></div>
+        <div class="glass-modal-content">
+            <div class="modal-header">
+                <h3 id="modal-title">Modal Title</h3>
+                <button class="glass-close-btn">&times;</button>
+            </div>
+            <div class="modal-body" id="modal-body">
+                <!-- Dynamic content will be inserted here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Beautiful Success Message -->
+    <div id="success-message" class="success-toast hidden">
+        <div class="toast-content">
+            <div class="toast-icon">✨</div>
+            <span id="success-text">Success!</span>
+        </div>
+    </div>
+
+    <!-- Loading Spinner -->
+    <div id="loading-spinner" class="loading-overlay hidden">
+        <div class="spinner">
+            <div class="spinner-ring"></div>
+            <div class="spinner-ring"></div>
+            <div class="spinner-ring"></div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
