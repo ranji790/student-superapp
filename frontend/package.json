@@ -1,0 +1,19 @@
+{
+  "name": "student-superapp-frontend",
+  "version": "1.0.0",
+  "description": "Ultra-Modern Student Life SuperApp Frontend",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx http-server . -p 3000 -c-1",
+    "dev": "npx http-server . -p 3000 -c-1",
+    "build": "echo 'Static files ready for production'",
+    "preview": "npx http-server . -p 3000"
+  },
+  "dependencies": {
+    "http-server": "^14.1.1"
+  },
+  "devDependencies": {},
+  "keywords": ["student", "webapp", "glassmorphism", "modern-ui"],
+  "author": "Your Team",
+  "license": "MIT"
+}
